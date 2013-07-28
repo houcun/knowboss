@@ -1,0 +1,28 @@
+/* Login */
+.login .checkbox {
+  margin-top: 10px;
+}
+.login p.checkbox label {
+  text-align: right;
+  width: 85px;
+  top: 6px;
+  left: 15px;
+}
+.login .checkbox input {
+  width: 15px;
+  height: 15px;
+  border: none;
+  padding: 5px;
+  background: none;
+}
+/* Simple Search */
+header .simple-search input[type=text] {
+  padding: 13px 15px 12px;
+}
+/* Twitter Bootstrap */
+.input-block-level {
+  min-height: 20px;
+}
+.row-fluid [class*="span"] {
+  min-height: 20px !important;
+}

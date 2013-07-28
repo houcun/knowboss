@@ -1,0 +1,29 @@
+@import "../../lesshat";
+
+.slide {
+	ul, li > div {
+		display: block !important;
+		visibility: hidden;
+		.opacity(0);
+		.translate3d(0, 50px, 0);
+		.translateY(50px);
+		.transition(~"visibility 0s linear 0.2s, transform 0.2s linear, opacity 0.2s linear");
+	}
+
+	li:hover > ul, li:hover > div {
+		visibility: visible;
+		.opacity(1);
+		.translate3d(0, 0, 0);
+		.translateY(0);
+		.transition-delay(0s);
+	}
+
+	> li > a .bubble-top {
+		.transition(~"transform 0.3s");
+	}
+
+	> li > a:hover .bubble-top {
+		.translate3d(0, -3px, 0);
+		.translateY(-3px);
+	}
+}

@@ -1,0 +1,256 @@
+@import "lesshat";
+
+/* Hero Carousel */
+.hero {
+	background: #333 url('../images/loader_dark.gif') center center no-repeat;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 30px;
+
+	&:hover {
+		.hero-carousel-nav {
+			li {
+				right: 0;
+
+				&.prev {
+					left: 0;
+					right: auto;
+				}
+			}
+		}
+	}
+}
+
+.hero-carousel {
+	width: 9999px;
+
+	article {
+		position: relative;
+		float: left;
+		display: block;
+		width: 1170px;
+		height: 400px;
+		margin: 0 auto;
+		.opacity(0.5);
+		.transition(~"opacity 0.3s ease-in-out");
+
+		&:after {
+			clear: both;
+			content: ".";
+			display: block;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+		}
+
+		&.current {
+			.opacity(1);
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		.contents {
+			color: #fff;
+			position: absolute;
+			bottom: 20px;
+			left: 40px;
+			display: block;
+			max-width: 60%;
+			z-index: 5;
+		}
+
+		.overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 50%;
+			z-index: 3;
+			filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#00000000', endColorstr='#FF000000');
+			.gradient(~"linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 80%)");
+		}
+	}
+}
+
+.hero-carousel-container {
+	article {
+		float: left;
+	}
+}
+
+.hero-carousel-nav {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin: -50px 0 0;
+	list-style: none;
+	z-index: 10;
+
+	li {
+		margin: 0;
+		position: absolute;
+		right: -50px;
+		.transition(~"all 0.3s ease-in-out");
+
+		&.prev {
+			right: auto;
+			left: -50px;
+
+			a {
+				.border-radius(0 4px 4px 0);
+			}
+		}
+
+		a {
+			background: #333;
+			color: #fff;
+			display: block;
+			padding: 35px 5px;
+			font-size: 28px;
+			.border-radius(4px 0 0 4px);
+			.transition(~"background 0.3s ease-in-out");
+
+			&:hover {
+				background: #555;
+				color: #fff;
+			}
+		}
+	}
+}
+
+/* iPhone retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+/* Medium desktop to large desktop*/
+@media (min-width: 980px) and (max-width: 1199px) {
+	.hero-carousel {
+		article {
+			width: 940px;
+			height: 321px;
+		}
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.hero-carousel {
+		article {
+			width: 724px;
+			height: 248px;
+
+			.contents {
+				max-width: 80%;
+			}
+
+			.overlay {
+				height: 70%;
+			}
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.hero-carousel {
+		article {
+			width: 583px;
+			height: 199px;
+
+			p {
+				font-size: 13px;
+				line-height: 15px;
+			}
+
+			h2 {
+				font-size: 22px;
+				line-height: 24px;
+			}
+
+			.contents {
+				max-width: 80%;
+				bottom: 10px;
+			}
+
+			.overlay {
+				height: 100%;
+				.background-image(~"linear-gradient(center top, transparent 0%, rgba(0, 0, 0, 0.8) 100%)");
+			}
+		}
+	}
+
+	.hero-carousel-nav {
+		margin-top: -35px;
+
+		li {
+			a {
+				padding: 25px 3px;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+/* Portrait kindle */
+@media (max-width: 600px) {
+	.hero-carousel {
+		article {
+			width: 540px;
+			height: 185px;
+
+			.contents {
+				position: relative;
+				top: 20px;
+				left: auto;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.hero-carousel {
+		article {
+			h2 {
+				font-size: 18px;
+				line-height: 20px;
+			}
+
+			p {
+				line-height: 16px;
+			}
+
+			.contents {
+				max-width: 70%;
+			}
+		}
+	}
+}
+
+/* Portrait phones and down */
+@media (max-width: 360px) {
+	.hero-carousel {
+		article {
+			h2 {
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			.contents {
+				top: 10px;
+				max-width: 50%;
+			}
+		}
+	}
+}

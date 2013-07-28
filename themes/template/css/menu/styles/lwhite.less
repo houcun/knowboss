@@ -1,0 +1,250 @@
+@import "../../lesshat";
+
+.lwhite {
+	height: 47px;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #cdcdcd;
+	background-color: #fff;
+	.background-image(~"linear-gradient(top, #fff, #f1f1f1)");
+	.box-shadow(~"inset 0 1px #fff, inset 0 -2px #e3e3e3");
+
+	.menu {
+		a {
+			text-decoration: none;
+		}
+
+		> li {
+			border-right: 1px solid #dfdfdf;
+			border-right: 1px solid rgba(10, 10, 10, 0.1);
+
+			&:hover > a {
+				border-left: none;
+				padding-left: 21px;
+				background-color: #fff;
+				.background-image(~"linear-gradient(top, #f0f0f0, #fff)");
+				.box-shadow(~"inset 0 3px #eee");
+			}
+
+			&:first-child {
+				border-left: 1px solid #e0e0e0;
+				border-left: 1px solid rgba(10, 10, 10, 0.1);
+			}
+
+			&:last-child {
+				a {
+					border-right: 1px #fbfbfb;
+					border-right: 1px solid rgba(255, 255, 255, 0.5);
+				}
+			}
+
+			> a {
+				color: #444;
+				font-weight: 600;
+				line-height: 18px;
+				text-shadow: 0 1px #f8f8f8;
+				padding: 13px 20px 16px;
+				border-left: 1px solid #fbfbfb;
+				border-left: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			&.floatr {
+				border-right: none;
+				border-left: 1px solid #e0e0e0;
+				border-left: 1px solid rgba(10, 10, 10, 0.1);
+			}
+		}
+
+		> li > a img, li > ul > li > a img {
+			border: 0;
+			margin-right: 7px;
+		}
+	}
+}
+
+/* Notification Bubbles */
+.lwhite {
+	.menu {
+		> li > a .bubble, li > a .bubble-alt {
+			font-size: 11px;
+			line-height: 11px;
+			padding: 1px 4px;
+			border-radius: 3px;
+			margin-left: 7px;
+			position: relative;
+			top: -1px;
+		}
+
+		> li {
+			> a {
+				.bubble {
+					background-color: #F6F6F6;
+					color: #444;
+					text-shadow: 0 -1px #ddd;
+					.box-shadow(~"inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px #ddd");
+				}
+
+				.bubble-alt {
+					background-color: #737373;
+					color: #fff;
+					text-shadow: 0 1px #505050;
+					.box-shadow(~"inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px #ddd");
+				}
+
+				.bubble-top {
+					position: absolute;
+					font-size: 11px;
+					line-height: 14px;
+					color: #fff;
+					padding: 0 3px;
+					right: 4px;
+					top: -8px;
+					text-shadow: none;
+					border: 1px solid #a00000;
+					border-radius: 3px;
+					background-color: #df0a0a;
+					.background-image(~"linear-gradient(top, #f26870, #ec0e23)");
+					.box-shadow(~"inset 0 1px #ffa7a7");
+				}
+			}
+		}
+
+		ul > li .bubble {
+			font-size: 11px;
+			line-height: 14px;
+			padding: 1px 4px;
+			border-radius: 3px;
+			background-color: #fff;
+			color: #777;
+			border: 1px solid #ccc;
+			position: absolute;
+			right: 10px;
+		}
+	}
+}
+
+/* Sub Menu */
+.lwhite {
+	.menu ul {
+		background-color: #fff;
+		border: 1px solid #b3b3b3;
+		border-top: none;
+	}
+
+	ul {
+		left: -1px;
+	}
+
+	.menu > li.floatr > ul {
+		right: -1px;
+		left: auto;
+
+		ul {
+			left: -127px;
+		}
+	}
+
+	.menu ul a {
+		color: #666;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 18px;
+		padding: 9px 12px;
+		border-top: 1px solid #e4e4e4;
+
+		&:hover {
+			background-color: #f0f0f0;
+		}
+	}
+
+	.menu ul ul li:first-child a {
+		border-top-color: #b3b3b3;
+	}
+}
+
+/* Mega Menu */
+.lwhite {
+	.menu li > div {
+		background-color: #fff;
+		border: 1px solid #b3b3b3;
+		border-top: none;
+		left: -1px;
+		padding: 10px;
+	}
+
+	.menu > li.floatr > div {
+		right: -1px;
+		left: auto;
+	}
+
+	.menu h4, .menu h5 {
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu h4 {
+		font-size: 15px;
+		color: #888;
+		font-weight: normal;
+		margin: 10px 10px 5px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #e1e1e1;
+	}
+
+	.menu h5 {
+		font-size: 14px;
+		color: #444;
+		font-weight: 700;
+		margin: 10px 10px 0;
+	}
+
+	.menu div ul {
+		position: relative;
+		width: auto;
+		margin: 7px 10px;
+		border: none;
+		left: auto;
+
+		li {
+			a {
+				color: #777;
+				font-size: 12px;
+				padding: 3px 0;
+				border: none;
+				line-height: inherit;
+
+				&:hover {
+					background-color: transparent;
+					color: #444;
+					padding-left: 5px !important;
+				}
+			}
+		}
+	}
+
+	.menu p {
+		color: #555;
+		font-size: 12px;
+		line-height: 18px;
+		margin: 9px 10px;
+		padding: 0;
+
+		a {
+			color: #888;
+			text-decoration: underline;
+
+			&:hover {
+				color: #555;
+			}
+		}
+	}
+}
+
+/* Language */
+.lwhite {
+	.language {
+		a {
+			color: #444;
+			text-shadow: 0 1px #f8f8f8;
+		}
+	}
+}

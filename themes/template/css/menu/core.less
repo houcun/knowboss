@@ -1,0 +1,137 @@
+@import "../lesshat";
+
+/* Reset */
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li, ul a {
+		position: relative;
+	}
+
+	> li {
+		float: left;
+
+		&.floatr {
+			float: right;
+		}
+	}
+
+	li > a {
+		display: block;
+	}
+
+	a {
+		small {
+			display: block;
+		}
+	}
+
+	ul {
+		position: absolute;
+		display: none;
+		width: 180px;
+
+		ul {
+			top: 0;
+			left: 180px;
+		}
+
+		li {
+			a {
+				.transition(~"all 0.3s ease-in-out");
+
+				&:hover {
+					padding-left: 15px !important;
+					border-left: 3px solid #b3b3b3;
+				}
+			}
+		}
+	}
+
+	> li.floatr > ul {
+		right: 0;
+
+		ul {
+			left: -180px;
+		}
+	}
+
+	li:hover > ul {
+		display: block;
+	}
+}
+
+/* Mega Menu */
+.menu {
+	.cols1, .cols2, .cols3, .cols4, .cols5 {
+		position: absolute;
+		display: none;
+		overflow: auto;
+	}
+
+	.cols1, .col1 {
+		width: 160px;
+	}
+
+	.cols2, .col2 {
+		width: 320px;
+	}
+
+	.cols3, .col3 {
+		width: 480px;
+	}
+
+	.cols4, .col4 {
+		width: 640px;
+	}
+
+	.cols5, .col5 {
+		width: 800px;
+	}
+
+	> li.floatr > div {
+		right: 0;
+	}
+
+	> li:hover > div {
+		display: block;
+	}
+
+	.col1, .col2, .col3, .col4, .col5 {
+		float: left;
+	}
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	nav.navigation {
+		.menu {
+			> li {
+				&:hover > a {
+					padding-left: 17px;
+				}
+
+				> a {
+					padding: 13px 16px 16px;
+				}
+			}
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {}

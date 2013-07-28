@@ -1,0 +1,63 @@
+﻿Version 1.2.5, 2013-05-25
+-------------------------
+
+- Fixed bugs with IE8
+- Update Twitter Bootstrap to 2.3.2
+- Removed Font Awesome More
+- Update Font Awesome to 3.1.1
+- Added new pages: Register, Clients, Gallery Alternative
+- Added new widget: Social List
+
+Version 1.2.4, 2013-05-10
+-------------------------
+
+- Added search page
+- Update skin colors
+- Added more 2 skin colors
+
+Version 1.2.3, 2013-05-03
+-------------------------
+
+- Added jQuery jScrollPane
+- Added jQuery Select2
+- Fixed problem with popup login
+- Added more 2 patterns and 2 backgrounds
+- Added more 2 menu colors
+
+Version 1.2.2, 2013-04-29
+-------------------------
+
+- Update color skins
+- Added jQuey DataTables
+- Fixed small bugs
+
+Version 1.2.1, 2013-04-26
+-------------------------
+
+- Fixed issue with menu on resize page (boxed mode)
+- Fixed issue bootstrap tables overflowing with long unspaced text
+- Update contact page layout
+- Added working ajax php contact form
+- Added comments to blog post
+
+Version 1.2, 2013-04-23
+-------------------------
+
+- Fixed several issues with IE9
+- Changed "switcher.js" and "switcher.css" files names to "style-switcher.js" and "style-switcher.css"
+- Update Style Switcher - Font Select
+
+Version 1.1, 2013-04-22
+-------------------------
+
+- Fixed several issues with IE8 and better the page speed
+- Update language selector
+- Update all colors skins
+- Change spacing in row bottom from 40px to 50px
+- Fixed bug with ticker (footer tweet scroll)
+- Added about page
+
+Version 1.0, 2013-04-18
+-------------------------
+
+- Initial Release
